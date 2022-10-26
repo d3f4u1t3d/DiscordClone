@@ -1,0 +1,16 @@
+.name {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    font-size: 14px;
+    align-items: center;
+    padding-left: 20px;
+    line-height: 20px;
+    cursor: default;
+    color: #B9BBBE;
+}
+
+.baricons {
+    padding-top: 6px;
+    color: #B9BBBE;
+}

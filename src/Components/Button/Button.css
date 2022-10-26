@@ -1,0 +1,144 @@
+.ButtonLogin {
+    padding: 10px;
+    height: 44px;
+    background-color: #5865f2;
+    border-color: transparent;
+    border-radius: 3px;
+    font-family: Whitney;
+    font-weight: 10;
+    font-size: 16px;
+    line-height: 24px;
+    color: hsl(0, calc(var(--saturation-factor, 1)*0%), 100%);
+    margin-bottom: 8px;
+}
+
+.LoginButton {
+    height: 38px;
+    width: 64px;
+    border-radius: 20px;
+}
+
+@font-face {
+    font-family: WhitneyLower;
+    src: url("./../../Assets/Fonts/02_Whitney_Paragraphs/Whitney-Book-Bas.otf");
+}
+
+.OverViewTopButton {
+    background-color: hsl(216, calc(var(--saturation-factor, 1)*7.2%), 13.5%);
+    color: hsl(214, calc(var(--saturation-factor, 1)*4%), 65.3%);
+    padding: 4px;
+    border-radius: 4px;
+    margin: 4px;
+    height: 1.5rem;
+    width: 98%;
+    overflow: hidden;
+    box-shadow: none;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: WhitneyLower;
+    outline: 0;
+    border: 0;
+}
+
+
+.switcher {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background: transparent;
+    color: #B9BBBE;
+    cursor: pointer;
+    outline: none;
+}
+
+.switcher:hover {
+    background: #45494e;
+}
+
+.switcher::before {
+    content: attr(data-tip);
+}
+
+.tipper {
+    position: relative;
+}
+
+.tipper::after,
+.tipper::before {
+    opacity: 0;
+    transition: opacity 64ms;
+}
+
+.tipper:hover::after,
+.tipper:hover::before {
+    opacity: 1;
+}
+
+.tipper::before {
+    content: attr(data-tip);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -132%) scale(0.98);
+    width: max-content;
+    font-size: 0.6rem;
+    font-weight: normal;
+    color: white;
+    background: black;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.tipper:hover::before {
+    transform: translate(-50%, -132%) scale(1);
+}
+
+.tipper::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -172%) rotate(45deg) scale(0.98);
+    z-index: -1;
+}
+
+.tipper:hover::after {
+    transform: translate(-50%, -172%) rotate(45deg) scale(1);
+}
+
+
+.sidebaricons {
+    margin: 0 0.5rem;
+    color: #B9BBBE;
+    z-index: 1;
+    background-color: transparent;
+    border: 0;
+}
+
+.sidebaricons:hover {
+    margin: 0 0.5rem;
+    color: #FFFFFF;
+
+}
+
+
+.icon9 {
+    color: #b9bbbe;
+    margin-left: 0.625rem;
+    z-index: 1;
+    background-color: transparent;
+    border: 0;
+}
+
+.icon9:hover {
+    color: #ffffff;
+}

@@ -1,0 +1,48 @@
+.chatavatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    color: #B9BBBE;
+}
+
+.chatavatar>svg {
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
+.chatavatar>img {
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+}
+
+.status-holder {
+    padding: 2px;
+    background: #242629;
+    position: relative;
+    border-radius: 50%;
+    bottom: -10px;
+    right: 19px;
+}
+
+.bpstatus-holder {
+    padding: 2px;
+    background: #242629;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 4px;
+    right: 3px;
+}
+
+.status-icon {
+    width: 8px;
+    height: 8px;
+    background: #00ae7a;
+    border-radius: 50px;
+    bottom: 4px;
+    right: 0;
+}

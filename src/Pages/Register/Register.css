@@ -1,0 +1,225 @@
+.RegisterPage {
+    background-image: url('./../../Assets/Logos/login_background.jpg');
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+
+
+:focus {
+    outline-color: #089dd9;
+    outline-style: solid;
+    outline-width: 4px;
+}
+
+@font-face {
+    font-family: Whitney;
+    src: url("./../../Assets/Fonts/02_Whitney_Paragraphs/Whitney-Semibold-Bas.otf");
+}
+
+@font-face {
+    font-family: WhitneyLower;
+    src: url("./../../Assets/Fonts/02_Whitney_Paragraphs/Whitney-Book-Bas.otf");
+}
+
+
+@font-face {
+    font-family: GintoNormal;
+    src: url("./../../Assets/Fonts/Ginto_Discord_210416/ABCGintoNormalFullPrint/ABCGintoNormal-Medium.otf");
+}
+
+@font-face {
+    font-family: GintoNormalBold;
+    src: url("./../../Assets/Fonts/Ginto_Discord_210416/ABCGintoNormalFullPrint/ABCGintoNormal-Bold.otf");
+}
+
+.wrapper1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.container1 {
+    display: flex;
+    background-color: #36393f;
+    align-content: center;
+    justify-content: center;
+    padding: 34px;
+    font-size: 18px;
+    position: relative;
+    border-radius: 7px;
+    /* width: 91.5%; */
+    width: 30%;
+}
+
+.DOBContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+.textcontainer1 {
+    text-align: center;
+}
+
+.h11 {
+    font-family: GintoNormalBold;
+    color: white;
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    font-weight: 300;
+}
+
+.Header {
+    font-family: WhitneyLower;
+    font-size: 16px;
+    line-height: 20px;
+    color: #aaacb0;
+}
+
+.forgotpassword {
+    margin-top: 7px;
+    font-family: WhitneyLower;
+    white-space: nowrap;
+    line-height: 16px;
+    font-size: 14px;
+    color: hsl(214, calc(var(--saturation-factor, 1)*4%), 65.3%);
+    margin-bottom: 20px;
+}
+
+.forgotpassword>a {
+    color: #01abee;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.forgotpassword>a:hover {
+    text-decoration: underline;
+}
+
+.login {
+    margin-top: 4px;
+    font-family: WhitneyLower;
+    white-space: nowrap;
+    line-height: 16px;
+    font-size: 14px;
+    color: hsl(214, calc(var(--saturation-factor, 1)*4%), 65.3%);
+}
+
+.login>a {
+    font-family: Whitney;
+    color: #01abee;
+    text-decoration: none;
+}
+
+.login>a:hover {
+    text-decoration: underline;
+}
+
+.disclaimer {
+    margin-top: 16px;
+    font-family: WhitneyLower;
+    white-space: nowrap;
+    line-height: 16px;
+    font-size: 12px;
+    color: hsl(214, calc(var(--saturation-factor, 1)*4%), 65.3%);
+}
+
+.disclaimer>a {
+    font-family: Whitney;
+    color: #01abee;
+    text-decoration: none;
+}
+
+.disclaimer>a:hover {
+    text-decoration: underline;
+}
+
+
+/* The container */
+.container2 {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: WhitneyLower;
+    font-size: 11.5px;
+    line-height: 16px;
+    margin-bottom: 8px;
+    font-weight: 100;
+    color: #b6b8bb;
+}
+
+/* Hide the browser's default checkbox */
+.container2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: #36393f;
+    border: 1px solid #b6b8bb;
+    border-radius: 4px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container2 input:checked~.checkmark2 {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark2:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container2 input:checked~.checkmark2:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container2 .checkmark2:after {
+    left: 7px;
+    top: 4px;
+    width: 3px;
+    height: 7px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

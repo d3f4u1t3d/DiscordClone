@@ -1,0 +1,34 @@
+.server:hover .servername_popup {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
+.servername_popup {
+    background: black;
+    padding: 0.68rem 1rem;
+    position: absolute;
+    top: 50%;
+    left: 155%;
+    transform-origin: left;
+    transform: translateY(-50%) scale(.98);
+    width: max-content;
+    max-width: 270%;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 64ms, transform 128ms;
+    pointer-events: none;
+    color: white;
+    z-index: 10;
+}
+
+.servername_popup::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background: black;
+    width: 24px;
+    height: 24px;
+    z-index: -1;
+}
