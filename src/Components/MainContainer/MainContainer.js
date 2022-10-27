@@ -1,6 +1,5 @@
-import React from 'react'
-import Button from '../Button/Button'
 import ChatInput from '../ChatInput/ChatInput'
+import Message from '../Message/Message'
 import SearchBarMainContainer from '../SearchBarMainContainer/SearchBarMainContainer'
 import './MainContainer.css'
 
@@ -13,16 +12,10 @@ function MainContainer() {
 
         <div style={{display:'flex', justifyContent:'space-between', width:'100%', height:'100%'}}>
             <div style={{ display:'flex', height: '100%', justifyContent: 'space-between', width: '100%', flexDirection: 'column' }}>
-        <div className="chatmessages">
-            <div className="message">
-                <img src="https://picsum.photos/200" alt="" height="40px" width="40px" style={{borderRadius:"50%"}}/>
-                    <div className="message__info">
-                        <h4>d3f4u1t3d <span className="message__timestamp">28/09/2022</span></h4>
-                            <p>Hello</p>
-                    </div>
+            <div className="chatmessages">
+                <Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message />
             </div>
         <ChatInput/>
-        </div>
         </div>
                     {/* <ul className="memberlist">
                         <li className="heading">MEMBERS - 2</li>
@@ -59,7 +52,7 @@ function MainContainer() {
                             </div>
                         </li>
                     </ul> */}
-                </div>
+             </div>
       </div>
     </>
   )

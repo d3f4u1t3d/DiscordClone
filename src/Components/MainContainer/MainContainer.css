@@ -14,36 +14,12 @@
 
 
 
-.message {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    color: #fff;
-
-
-}
-
-.message__info {
-    margin-left: 20px;
-}
-
-.message__timestamp {
-    color: grey;
-    margin-left: 20px;
-    font-size: x-small;
-}
-
-.message__info>p {
-    width: 250px;
-    word-wrap: break-word;
-}
 
 .chatmessages {
     display: flex;
     background-color: #36393f;
     flex: 1;
     flex-direction: column;
-    justify-content: space-between;
     overflow: scroll;
     min-width: 60%;
 }
