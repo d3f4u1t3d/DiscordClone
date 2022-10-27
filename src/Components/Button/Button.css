@@ -142,3 +142,7 @@
 .icon9:hover {
     color: #ffffff;
 }
+
+.sendmessage {
+    display: none;
+}

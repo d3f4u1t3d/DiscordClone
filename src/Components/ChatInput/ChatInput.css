@@ -1,0 +1,12 @@
+.inputchat {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #40444b;
+    color: #b9bbbe;
+    align-items: center;
+}
