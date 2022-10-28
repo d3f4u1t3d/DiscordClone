@@ -90,7 +90,7 @@ export const static_chats_list=[
 export const dynamic_chats_list = [
     {
         svg:'',
-        img:'https://cdn.discordapp.com/avatars/812301208609488957/0a3f896f85f3b7b56e80e6b2f129a370.webp?size=32',
+        img:'https://cdn.discordapp.com/avatars/812301208609488957/8ef4aaa9347fc63bc529f4948305bae3.webp?size=32',
         name:'_bellissimo.soul_',
         badgecounter:'1',
         ava:1,
