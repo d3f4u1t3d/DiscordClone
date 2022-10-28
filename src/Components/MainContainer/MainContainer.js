@@ -12,10 +12,12 @@ function MainContainer() {
 
         <div style={{display:'flex', justifyContent:'space-between', width:'100%', height:'100%'}}>
             <div style={{ display:'flex', height: '100%', justifyContent: 'space-between', width: '100%', flexDirection: 'column' }}>
-            <div className="chatmessages">
-                <Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message />
-            </div>
+        <div className="chatmessages">
+            <Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message />
+        </div>
+        <div className="bottompanel">
         <ChatInput/>
+        </div>
         </div>
                     {/* <ul className="memberlist">
                         <li className="heading">MEMBERS - 2</li>

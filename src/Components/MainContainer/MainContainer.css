@@ -12,7 +12,10 @@
     flex: 1;
 }
 
-
+.bottompanel {
+    position: fixed;
+    bottom: 0;
+}
 
 
 .chatmessages {
