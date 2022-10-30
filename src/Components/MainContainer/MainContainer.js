@@ -8,17 +8,24 @@ function MainContainer() {
     <>
       <div className="main_container">
         <SearchBarMainContainer/>
+        <div className="testcontainer">
+            <div className="chatcontainer">
+                <div className="chatinput">
+                </div>
+            </div>
+            <div className="memberscontainer"></div>
+        </div>
         
 
-        <div style={{display:'flex', justifyContent:'space-between', width:'100%', height:'100%',flexDirection:'column'}}>
-            <div style={{ display:'flex', height: '100%', justifyContent: 'space-between', width: '100%',height:'51.6rem', flexDirection: 'column' }}>
+        {/* <div style={{display:'flex', justifyContent:'space-between', width:'100%', height:'100%',flexDirection:'column'}}>
+            <div style={{ display:'flex', height: '100%', justifyContent: 'space-between', width: '100%', flexDirection: 'column' }}>
         <div className="chatmessages">
             <Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message /><Message />
         </div>
         
-        </div>
         <ChatInput/>
-                    {/* <ul className="memberlist">
+        </div>
+                    <ul className="memberlist">
                         <li className="heading">MEMBERS - 2</li>
                         <li className="members">
                             <div className="muser-info">
@@ -52,8 +59,8 @@ function MainContainer() {
                                 </div>
                             </div>
                         </li>
-                    </ul> */}
-             </div>
+                    </ul>
+             </div> */}
       </div>
     </>
   )

@@ -95,14 +95,12 @@
 .buttons-container {
     display: flex;
     position: relative;
-    left: -5px;
 }
 
 
 .username::before {
     content: attr(data-tip);
 }
-
 
 .content_chats {
     background-color: hsl(223, calc(var(--saturation-factor, 1)*6.9%), 19.8%);
