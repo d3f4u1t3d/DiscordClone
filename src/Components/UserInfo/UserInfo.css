@@ -1,0 +1,79 @@
+.bottom_panel {
+    background: #242629;
+    padding: 0.5rem 1rem;
+    transform: scale(1);
+    display: flex;
+    width: 86%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    bottom: 0px;
+}
+
+.bottom_panel:hover .status,
+.bottom_panel:hover .tag {
+    transform: translateY(-105%);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    width: 7rem;
+}
+
+.user-info:hover {
+    background: #45494e;
+    border-radius: 2px;
+}
+
+.username {
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.name-tag {
+    position: relative;
+    left: -0.7rem;
+}
+
+.roller {
+    font-size: 0.6rem;
+    color: hsl(214, calc(var(--saturation-factor, 1)*4%), 65.3%);
+    ;
+    position: relative;
+    overflow: hidden;
+}
+
+.tag,
+.status {
+    transition: transform 320ms;
+}
+
+.tag {
+    position: absolute;
+}
+
+.avatar_wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+}
+
+.avatar {
+    width: inherit;
+    border-radius: inherit;
+}
+
+
+.buttons-container {
+    display: flex;
+    position: relative;
+}
+
+
+.username::before {
+    content: attr(data-tip);
+}

@@ -31,57 +31,16 @@
 
 }
 
-.memberlist {
-    position: relative;
-    width: 20%;
-    height: 94%;
-}
-
-.memberlist {
-    background-color: #2f3136;
-    max-height: inherit;
-    padding: 1rem;
+.maincontainer1 {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-    list-style-type: none;
-    right: 0;
-
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
-
-
-.members {
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 15.2vw;
-    padding: 0.2rem;
-}
-
-.muser-info {
-    display: flex;
-    align-items: center;
-    width: 14rem;
-}
-
-.muser-info:hover {
-    background: #45494e;
-    border-radius: 2px;
-}
-
-.musername {
-    font-size: 0.9rem;
-    cursor: pointer;
-    color: #8f9296;
-}
-
-.heading {
-    color: #8f9296;
-    font-size: 10px;
-    font-weight: 1000;
+.maincontainer1::-webkit-scrollbar {
+    display: none;
 }

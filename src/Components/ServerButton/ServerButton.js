@@ -1,15 +1,25 @@
-import React from 'react'
-import "./ServerButton.css"
-import PopUp from '../PopUp/PopUp'
+import React from "react";
+import "./ServerButton.css";
+import PopUp from "../PopUp/PopUp";
 
-export default function ServerButton({svg,img,className,imgClassName,alt}) {
+export default function ServerButton({
+  svg,
+  img,
+  className,
+  imgClassName,
+  alt,
+  onClick,
+}) {
   return (
-    <div>
-    <div className={className}>
-       {svg==""?<img src={img} className={imgClassName} alt={alt} />:svg}
-       <PopUp popUpClassName='servername_popup' headingClassName='servername' serverName={alt} />
-    </div>
-    </div>
-    
-  )
+    <>
+      <div onClick={onClick} className={className}>
+        {svg == "" ? <img src={img} className={imgClassName} alt={alt} /> : svg}
+        <PopUp
+          popUpClassName="servername_popup"
+          headingClassName="servername"
+          serverName={alt}
+        />
+      </div>
+    </>
+  );
 }

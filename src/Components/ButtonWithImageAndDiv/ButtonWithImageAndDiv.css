@@ -1,0 +1,27 @@
+.photobutton {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    width: 95%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+.iconservercreate {
+    margin: 8px 8px 8px 16px;
+}
+
+.buttonText {
+    font-family: Whitney;
+    font-size: 1.1em;
+    font-weight: 700;
+    line-height: 1.25rem;
+    color: hsl(210, calc(var(--saturation-factor, 1)*9.8%), 20%);
+}
+
+.buttonArrow {
+    margin-left: auto;
+    margin-right: 16px;
+}

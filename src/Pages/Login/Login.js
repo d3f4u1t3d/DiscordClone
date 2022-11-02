@@ -10,7 +10,7 @@ import { Link , Navigate} from 'react-router-dom';
 
 axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 const api =  axios.create({
-  baseURL:'http://192.168.1.37:7070'
+  baseURL:'http://192.168.1.69:7070'
 })
 
 
@@ -49,7 +49,7 @@ function Login() {
     // sendForm("user/login",formData)
     .then(res => {
       console.log(res);
-      sessionStorage.setItem('tokenKey', res.accessToken);
+      sessionStorage.setItem('tokenKey', res.data.accessToken);
       setNavigate(true)
     })
     .catch(err => {
@@ -92,7 +92,7 @@ function Login() {
         </div>
       </div>
       </div>
-      {/* {navigate && ( <Navigate to="/" replace={true} /> )} */}
+      {navigate && ( <Navigate to="/" replace={true} /> )}
     </>
   )
 }
