@@ -1,28 +1,28 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import App from '../App'
-import Login from './../Pages/Login/Login'
-import Register from './../Pages/Register/Register'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import App from "../App";
+import LoadingScreen from "../Pages/LoadingScreen/LoadingScreen";
+import Login from "./../Pages/Login/Login";
+import Register from "./../Pages/Register/Register";
 
 function Router() {
-
   // const route = ['/login','/signup']
   return (
     <>
-        <Routes>
-            <Route path='/login' element={<Login />} />
-            <Route path='/register' element={<Register />} />
-            <Route path='/' element={<App/>}/>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<App />} />
+        <Route path="/app" element={<LoadingScreen />} />
 
-            
-            {/* {
+        {/* {
               route.map((val,index)=>{
                 return (<Route key={index} path={val} element={<Homepage />} />)
               })
             } */}
-        </Routes>
+      </Routes>
     </>
-  )
+  );
 }
 
-export default Router
+export default Router;

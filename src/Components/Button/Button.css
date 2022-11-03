@@ -180,3 +180,24 @@
     font-weight: 500;
     padding: 2px 16px;
 }
+
+.JoinServer23 {
+    background-color: #5865f2;
+    border-color: transparent;
+    border-radius: 3px;
+    font-family: WhitneyLower;
+    color: hsl(0, calc(var(--saturation-factor, 1)*0%), 100%);
+    align-self: stretch;
+    height: 38px;
+    width: auto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 16px;
+}
+
+.noborder {
+    border: 0;
+    color: hsl(214, calc(var(--saturation-factor, 1)*9.9%), 50.4%);
+    font-size: 14px;
+    font-family: WhitneyLower;
+}

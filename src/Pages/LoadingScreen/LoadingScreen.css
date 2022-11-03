@@ -1,0 +1,182 @@
+.loadingwrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: #36393f;
+}
+
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
+
+.contentdiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: fit-content;
+    width: fit-content;
+    margin: auto auto; */
+}
+
+.rotatinglogodiv {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    background:
+        radial-gradient(6px at calc(50% + 2px) calc(50% + 4px), #36393f 90%, #fff) left,
+        radial-gradient(6px at calc(50% - 2px) calc(50% + 4px), #36393f 90%, #fff) right;
+    background-size: 51% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    /* filter: drop-shadow(.5px 0px 0px #000) drop-shadow(0px -.5px 0px #000) drop-shadow(0px .5px 0px #000) drop-shadow(1px 1px 0px #000) drop-shadow(-.5px 0px 0px #000); */
+    animation: dis-0 1s infinite;
+}
+
+.rotatinglogodiv::before,
+.rotatinglogodiv::after {
+    content: "";
+    position: absolute;
+    animation: inherit;
+}
+
+.rotatinglogodiv::before {
+    inset: -5px -7px -10px;
+    animation-name: dis-1;
+    border: solid #fff;
+    border-width: 2px 12px 6px;
+    border-radius: 50% / 35%;
+    clip-path: polygon(8% 0, 35% 0, 40% 15px, 60% 15px, 65% 0, 92% 0, 100% 100%, 70% 100%, 60% calc(100% - 20px), 40% calc(100% - 20px), 30% 100%, 0 100%);
+}
+
+.rotatinglogodiv::after {
+    inset: -6px -9px -8px;
+    animation-name: dis-2;
+    background: #fff;
+    border-radius: 85% 85% 77% 77%;
+    -webkit-mask: radial-gradient(50% 110%, #0000 82%, #000 0);
+    mask: radial-gradient(50% 110%, #0000 82%, #000 0);
+    clip-path: polygon(10% 0, 90% 0, 105% 100%, -5% 100%);
+}
+
+@keyframes dis-0 {
+    20% {
+        transform: rotate(-20deg)
+    }
+
+    75% {
+        transform: rotate(380deg)
+    }
+
+    80%,
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes dis-1 {
+    20% {
+        transform: rotate(0deg);
+        inset: -5px -7px -10px
+    }
+
+    60% {
+        transform: rotate(-60deg);
+        inset: -10px -12px -15px
+    }
+
+    80%,
+    100% {
+        transform: rotate(0deg);
+        inset: -5px -7px -10px
+    }
+}
+
+@keyframes dis-2 {
+    20% {
+        transform: rotate(0deg);
+        inset: -6px -9px -8px
+    }
+
+    60% {
+        transform: rotate(-60deg);
+        inset: -17px -21px -19px
+    }
+
+    80%,
+    100% {
+        transform: rotate(0deg);
+        inset: -6px -9px -8px
+    }
+}
+
+.didyouknowdiv {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    top: 60px;
+
+}
+
+.headingcontainer {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: hsl(0, calc(var(--saturation-factor, 1)*0%), 100%);
+    line-height: 1rem;
+
+    text-transform: uppercase;
+}
+
+.subtext {
+    color: hsl(210, calc(var(--saturation-factor, 1)*2.9%), 86.7%);
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: WhitneyLower;
+}
+
+.footercontent {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.connectiontext {
+    font-size: .75rem;
+    color: hsl(216, calc(var(--saturation-factor, 1)*3.7%), 73.5%);
+    margin-bottom: 0.5rem;
+    font-family: WhitneyLower;
+    font-weight: 400;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.LoadingLinks>svg {
+    margin-right: .25rem;
+}
+
+.LoadingLinks {
+    display: flex;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1rem;
+    color: hsl(197, calc(var(--saturation-factor, 1)*100%), 47.8%);
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 10px;
+    font-family: Whitney;
+    align-items: center;
+}

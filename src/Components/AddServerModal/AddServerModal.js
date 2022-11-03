@@ -14,11 +14,26 @@ import Button from "../Button/Button";
 const AddServerModal = forwardRef((props, ref) => {
   const innerRef = useRef();
   useImperativeHandle(ref, () => innerRef.current);
-  // axios.post('http://192.168.1.69:7070/server/addserver',{
-  //   name:"server 24"
-  // },{
-  //  headers:{ "Authorization":`Bearer ${sessionStorage.getItem('tokenKey')}`}
-  // }).then(res=>{console.log(res)}).catch(err=>{console.log(err)})
+
+  axios
+    .post(
+      "http://192.168.1.69:7070/user/createserver",
+      {
+        name: "server 24",
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem("tokenKey")}`,
+        },
+      }
+    )
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   return (
     <div className="overlay" ref={innerRef}>
       <div className="modalContainer">
@@ -42,21 +57,64 @@ const AddServerModal = forwardRef((props, ref) => {
           />
         </div>
         <div className="buttonscontainer">
-          <ButtonWithImageAndDiv img={ServerTemplate0} text="Create Your Own" />
+          <ButtonWithImageAndDiv
+            className="photobutton"
+            img={ServerTemplate0}
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="Create Your Own"
+          />
           <div className="modaltext">start from a template</div>
-          <ButtonWithImageAndDiv img={ServerTemplate1} text="Gaming" />
-          <ButtonWithImageAndDiv img={ServerTemplate2} text="School Club" />
-          <ButtonWithImageAndDiv img={ServerTemplate3} text="Study Group" />
-          <ButtonWithImageAndDiv img={ServerTemplate4} text="Friends" />
+          <ButtonWithImageAndDiv
+            className="photobutton"
+            img={ServerTemplate1}
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="Gaming"
+          />
+          <ButtonWithImageAndDiv
+            className="photobutton"
+            img={ServerTemplate2}
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="School Club"
+          />
+          <ButtonWithImageAndDiv
+            className="photobutton"
+            img={ServerTemplate3}
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="Study Group"
+          />
+          <ButtonWithImageAndDiv
+            className="photobutton"
+            img={ServerTemplate4}
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="Friends"
+          />
           <ButtonWithImageAndDiv
             img={ServerTemplate5}
-            text="Artists & Creators"
+            className="photobutton"
+            imgClassName="iconservercreate"
+            text1ClassName="buttonText"
+            text1="Artists & Creators"
           />
-          <ButtonWithImageAndDiv img={ServerTemplate6} text="Local Community" />
+          <ButtonWithImageAndDiv
+            img={ServerTemplate6}
+            className="photobutton"
+            imgClassName="iconservercreate"
+            text1="Local Community"
+            text1ClassName="buttonText"
+          />
         </div>
         <div className="JoinContainer">
           <h2 className="h23">Already have an invite?</h2>
-          <Button className="JoinServer" value="Join a Server" />
+          <Button
+            className="JoinServer"
+            value="Join a Server"
+            onClick={props.onClick}
+          />
         </div>
       </div>
     </div>
