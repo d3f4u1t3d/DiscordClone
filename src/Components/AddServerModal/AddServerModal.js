@@ -58,6 +58,7 @@ const AddServerModal = forwardRef((props, ref) => {
         </div>
         <div className="buttonscontainer">
           <ButtonWithImageAndDiv
+            onClick={props.onClick1}
             className="photobutton"
             img={ServerTemplate0}
             imgClassName="iconservercreate"

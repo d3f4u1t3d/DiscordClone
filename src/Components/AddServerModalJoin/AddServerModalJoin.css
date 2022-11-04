@@ -72,8 +72,9 @@
     display: flex;
 
     align-items: center;
-    padding: 1rem;
+    padding: 4%;
     justify-content: space-between;
     width: 92%;
     background-color: hsl(220, calc(var(--saturation-factor, 1)*13%), 95.5%);
+    border-radius: 4px;
 }

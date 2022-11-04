@@ -6,7 +6,6 @@ import { useState } from "react";
 
 function GuildsContainer(props) {
   let [modal, setModal] = useState(false);
-  console.log(props);
   const toggleModal = () => {
     setModal(!modal);
     props.addServerModalRef.current.classList.add("show");

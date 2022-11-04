@@ -160,6 +160,7 @@
     color: hsl(215, calc(var(--saturation-factor, 1)*9.7%), 34.3%);
     box-sizing: content-box;
     border: 0;
+    background: transparent;
 }
 
 .closebutton:hover {
