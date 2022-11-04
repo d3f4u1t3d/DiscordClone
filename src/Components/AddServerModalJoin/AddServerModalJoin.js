@@ -16,8 +16,6 @@ function AddServerModalJoin({ setJoinRef, addServerModalRef }) {
     setJoinRef(joinRef);
   }, []);
 
-  console.log(addServerModalRef);
-
   const handleChange = (e) => {
     let { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -38,6 +36,7 @@ function AddServerModalJoin({ setJoinRef, addServerModalRef }) {
       )
       .then((res) => {
         console.log(res);
+        joinRef.current.classList.remove("show");
       })
       .catch((err) => {
         console.log(err);

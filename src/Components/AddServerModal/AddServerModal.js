@@ -15,25 +15,6 @@ const AddServerModal = forwardRef((props, ref) => {
   const innerRef = useRef();
   useImperativeHandle(ref, () => innerRef.current);
 
-  axios
-    .post(
-      "http://192.168.1.69:7070/user/createserver",
-      {
-        name: "server 24",
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${sessionStorage.getItem("tokenKey")}`,
-        },
-      }
-    )
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-
   return (
     <div className="overlay" ref={innerRef}>
       <div className="modalContainer">
@@ -68,6 +49,7 @@ const AddServerModal = forwardRef((props, ref) => {
           <div className="modaltext">start from a template</div>
           <ButtonWithImageAndDiv
             className="photobutton"
+            onClick={props.onClick1}
             img={ServerTemplate1}
             imgClassName="iconservercreate"
             text1ClassName="buttonText"
@@ -75,6 +57,7 @@ const AddServerModal = forwardRef((props, ref) => {
           />
           <ButtonWithImageAndDiv
             className="photobutton"
+            onClick={props.onClick1}
             img={ServerTemplate2}
             imgClassName="iconservercreate"
             text1ClassName="buttonText"
@@ -82,6 +65,7 @@ const AddServerModal = forwardRef((props, ref) => {
           />
           <ButtonWithImageAndDiv
             className="photobutton"
+            onClick={props.onClick1}
             img={ServerTemplate3}
             imgClassName="iconservercreate"
             text1ClassName="buttonText"
@@ -89,6 +73,7 @@ const AddServerModal = forwardRef((props, ref) => {
           />
           <ButtonWithImageAndDiv
             className="photobutton"
+            onClick={props.onClick1}
             img={ServerTemplate4}
             imgClassName="iconservercreate"
             text1ClassName="buttonText"
@@ -97,6 +82,7 @@ const AddServerModal = forwardRef((props, ref) => {
           <ButtonWithImageAndDiv
             img={ServerTemplate5}
             className="photobutton"
+            onClick={props.onClick1}
             imgClassName="iconservercreate"
             text1ClassName="buttonText"
             text1="Artists & Creators"
@@ -104,6 +90,7 @@ const AddServerModal = forwardRef((props, ref) => {
           <ButtonWithImageAndDiv
             img={ServerTemplate6}
             className="photobutton"
+            onClick={props.onClick1}
             imgClassName="iconservercreate"
             text1="Local Community"
             text1ClassName="buttonText"

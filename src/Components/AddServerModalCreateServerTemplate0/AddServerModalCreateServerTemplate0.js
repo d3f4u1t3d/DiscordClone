@@ -11,6 +11,7 @@ import { useRef, useEffect } from "react";
 function AddServerModalCreateServerTemplate0({
   setsertemp,
   addServerModalRef,
+  onClick,
 }) {
   const sertemp = useRef();
   useEffect(() => {
@@ -41,6 +42,7 @@ function AddServerModalCreateServerTemplate0({
           </div>
           <div className="secondarycontainer2">
             <ButtonWithImageAndDiv
+              onClick={onClick}
               img={clubserver}
               imgClassName="img2"
               text1="For a club or community"
@@ -49,6 +51,7 @@ function AddServerModalCreateServerTemplate0({
             />
             <ButtonWithImageAndDiv
               img={friendsserver}
+              onClick={onClick}
               imgClassName="img2"
               text1="For me and my friends"
               text1ClassName="buttonText1"
@@ -56,7 +59,8 @@ function AddServerModalCreateServerTemplate0({
             />
             <div className="textbox">
               <p>
-                Not sure? You can <a href="#"> skip this question</a> for now.
+                Not sure? You can <a onClick={onClick}> skip this question</a>{" "}
+                for now.
               </p>
             </div>
           </div>

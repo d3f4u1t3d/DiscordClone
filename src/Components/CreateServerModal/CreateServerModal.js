@@ -5,9 +5,16 @@ import axios from "axios";
 import { useState } from "react";
 
 import "./CreateServerModal.css";
+import { useRef, useEffect } from "react";
 
-function CreateServerModal() {
+function CreateServerModal({ setcreatesev, addServerModalRef }) {
   const [formData, setFormData] = useState({ servername: "" });
+
+  const createsev = useRef();
+
+  useEffect(() => {
+    setcreatesev(createsev);
+  }, []);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -19,8 +26,10 @@ function CreateServerModal() {
     console.log(formData.link);
     axios
       .post(
-        `http://192.168.1.69:7070/user/joinserver/${formData.link}`,
-        {},
+        "http://192.168.1.69:7070/user/createserver",
+        {
+          name: formData.servername,
+        },
         {
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem("tokenKey")}`,
@@ -29,6 +38,7 @@ function CreateServerModal() {
       )
       .then((res) => {
         console.log(res);
+        createsev.current.classList.remove("show");
       })
       .catch((err) => {
         console.log(err);
@@ -37,10 +47,7 @@ function CreateServerModal() {
 
   return (
     <div>
-      <div
-        className="overlay show"
-        //   ref={sertemp}
-      >
+      <div className="overlay" ref={createsev}>
         <div className="modalContainer3">
           <div className="modalHeader3">
             <h1 className="h133">Customize your server</h1>
@@ -49,7 +56,7 @@ function CreateServerModal() {
               always change it later.
             </p>
             <Button
-              //   onClick={() => sertemp.current.classList.remove("show")}
+              onClick={() => createsev.current.classList.remove("show")}
               value={
                 <svg>
                   <path
@@ -112,16 +119,16 @@ function CreateServerModal() {
             <div className="lowerText">
               <p>
                 By creating a server, you agree to Discord's
-                <a href="#">Community Guidlines</a>
+                <a href="https://discord.com/guidelines">Community Guidlines</a>
               </p>
             </div>
           </div>
           <div className="JoinContainer3">
             <Button
-              //   onClick={() => {
-              //     sertemp.current.classList.remove("show");
-              //     addServerModalRef.current.classList.add("show");
-              //   }}
+              onClick={() => {
+                createsev.current.classList.remove("show");
+                addServerModalRef.current.classList.add("show");
+              }}
               value="Back"
               className="noborder"
             />

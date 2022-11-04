@@ -17,6 +17,7 @@ function App() {
   const [selected, setSelected] = useState("");
   const [joinRef, setJoinRef] = useState("");
   const [sertemp, setsertemp] = useState("");
+  const [createsev, setcreatesev] = useState("");
 
   const addServerModalRef = useRef();
   function handleRef() {
@@ -29,14 +30,19 @@ function App() {
     sertemp.current.classList.add("show");
   }
 
+  function handleRefCreateServerButton() {
+    sertemp.current.classList.remove("show");
+    createsev.current.classList.add("show");
+  }
+
   return (
     <div style={{ display: "flex", flex: 1 }}>
       {/* <Home/> */}
-      {/* <OverView addServerModalRef={addServerModalRef} /> */}
+      <OverView addServerModalRef={addServerModalRef} />
       {/* <AddServerModal /> */}
       {/* test */}
       {/* <LoadingScreen /> */}
-      {/* <AddServerModalJoin
+      <AddServerModalJoin
         setJoinRef={setJoinRef}
         addServerModalRef={addServerModalRef}
       />
@@ -48,8 +54,12 @@ function App() {
       <AddServerModalCreateServerTemplate0
         setsertemp={setsertemp}
         addServerModalRef={addServerModalRef}
-      /> */}
-      <CreateServerModal />
+        onClick={handleRefCreateServerButton}
+      />
+      <CreateServerModal
+        setcreatesev={setcreatesev}
+        addServerModalRef={sertemp}
+      />
     </div>
   );
 }
