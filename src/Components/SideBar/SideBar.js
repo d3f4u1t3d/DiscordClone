@@ -1,41 +1,128 @@
-import React from 'react'
-import Button from '../Button/Button'
-import PrivateChatContents from '../PrivateChatContents/PrivateChatContents'
-import { static_chats_list,dynamic_chats_list } from '../../Assets/MockData/mockdata'
-import "./SideBar.css"
-import Avatar from '../Avatar/Avatar'
-import UserInfo from '../UserInfo/UserInfo'
+import React from "react";
+import Button from "../Button/Button";
+import PrivateChatContents from "../PrivateChatContents/PrivateChatContents";
+import {
+  static_chats_list,
+  dynamic_chats_list,
+} from "../../Assets/MockData/mockdata";
+import "./SideBar.css";
+import Avatar from "../Avatar/Avatar";
+import UserInfo from "../UserInfo/UserInfo";
 
-function SideBar() {
+function Type1() {
+  return (
+    <div className="sidebar">
+      <div className="SearchBar">
+        <Button
+          className="OverViewTopButton"
+          value="Find or start a conversation"
+        />
+      </div>
+      <div className="content_chats">
+        <ul className="privatechats">
+          {static_chats_list.map((data) => {
+            return (
+              <PrivateChatContents
+                svg={data.svg}
+                img={data.img}
+                name={data.name}
+                badgecounter={data.badgecounter}
+              />
+            );
+          })}
+
+          <h2 className="headingcontainer">
+            <span className="Heading">Direct Messages</span>
+            <div className="invitebutton">
+              <svg aria-hidden="true" role="img" viewBox="0 0 18 18">
+                <polygon
+                  fillRule="nonzero"
+                  fill="currentColor"
+                  points="15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"
+                ></polygon>
+              </svg>
+            </div>
+          </h2>
+          {dynamic_chats_list.map((data) => {
+            return (
+              <PrivateChatContents
+                svg={data.svg}
+                img={data.img}
+                name={data.name}
+                badgecounter={data.badgecounter}
+                ava={data.ava}
+                className={data.className}
+              />
+            );
+          })}
+        </ul>
+      </div>
+      <UserInfo />
+    </div>
+  );
+}
+
+function SideBar(props) {
   return (
     <>
-      <div className="sidebar">
-        <div className='SearchBar'>
-        <Button className="OverViewTopButton" value="Find or start a conversation"/> 
+      {props.type === 1 ? (
+        <Type1 />
+      ) : props.type === 2 ? (
+        ""
+      ) : props.type === 3 ? (
+        ""
+      ) : (
+        ""
+      )}
+      {/* <div className="sidebar">
+        <div className="SearchBar">
+          <Button
+            className="OverViewTopButton"
+            value="Find or start a conversation"
+          />
         </div>
-        <div className='content_chats'>
-            <ul className="privatechats">
-                {static_chats_list.map((data)=>{
-                    return (<PrivateChatContents svg={data.svg} img={data.img} name={data.name} badgecounter={data.badgecounter}/>)
-                })}
+        <div className="content_chats">
+          <ul className="privatechats">
+            {static_chats_list.map((data) => {
+              return (
+                <PrivateChatContents
+                  svg={data.svg}
+                  img={data.img}
+                  name={data.name}
+                  badgecounter={data.badgecounter}
+                />
+              );
+            })}
 
-                <h2 className='headingcontainer'>
-                    <span className='Heading'>Direct Messages</span>
-                    <div className="invitebutton">
-                    <svg aria-hidden="true" role="img" viewBox="0 0 18 18"><polygon fillRule="nonzero" fill="currentColor" points="15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"></polygon></svg>
-                    </div>
-                </h2>
-                {dynamic_chats_list.map((data)=>{
-                    return (<PrivateChatContents svg={data.svg} img={data.img} name={data.name} badgecounter={data.badgecounter} ava={data.ava} className={data.className}/>)
-                })}
-            </ul>
+            <h2 className="headingcontainer">
+              <span className="Heading">Direct Messages</span>
+              <div className="invitebutton">
+                <svg aria-hidden="true" role="img" viewBox="0 0 18 18">
+                  <polygon
+                    fillRule="nonzero"
+                    fill="currentColor"
+                    points="15 10 10 10 10 15 8 15 8 10 3 10 3 8 8 8 8 3 10 3 10 8 15 8"
+                  ></polygon>
+                </svg>
+              </div>
+            </h2>
+            {dynamic_chats_list.map((data) => {
+              return (
+                <PrivateChatContents
+                  svg={data.svg}
+                  img={data.img}
+                  name={data.name}
+                  badgecounter={data.badgecounter}
+                  ava={data.ava}
+                  className={data.className}
+                />
+              );
+            })}
+          </ul>
         </div>
-
-
         <UserInfo />
-
-
-                {/* <div className="sec-center">
+      </div> */}
+      {/* <div className="sec-center">
                     <input className="dropdown1" type="checkbox" id="dropdown" name="dropdown" />
                     <label className="for-dropdown" for="dropdown">
                         <p>IBM DRAGONS<i className="uil arrow down"></i></p>
@@ -134,7 +221,7 @@ function SideBar() {
 
                 </div> */}
 
-        {/* <div className='content_chats'>
+      {/* <div className='content_chats'>
             <ul className="privatechats">
                 <li className='content1'>
                     <div className="avatarwithtext">
@@ -169,7 +256,7 @@ function SideBar() {
             </ul>
         </div> */}
 
-        {/* <section className="bottom_panel">
+      {/* <section className="bottom_panel">
                 <div className="user-info">
                     <div className="avatar_wrapper">
                         <img className="avatar" src="https://picsum.photos/200" alt="profile" />
@@ -219,10 +306,8 @@ function SideBar() {
                     </button>
                 </div>
         </section> */}
-
-      </div>
     </>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;

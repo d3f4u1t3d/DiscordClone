@@ -22,6 +22,7 @@ function InputBox(props) {
         id={props.htmlFor}
         onChange={props.onChange}
         name={props.name}
+        // value={props.value}
         placeholder={props.placeholder}
         required
       />

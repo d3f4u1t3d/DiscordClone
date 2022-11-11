@@ -14,7 +14,7 @@ import { Link, Navigate } from "react-router-dom";
 
 axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 const api = axios.create({
-  baseURL: "http://192.168.1.69:7070",
+  baseURL: "http://192.168.1.65:7070",
 });
 
 function Login() {
