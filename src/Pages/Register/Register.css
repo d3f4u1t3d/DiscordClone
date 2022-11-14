@@ -55,7 +55,8 @@
     position: relative;
     border-radius: 7px;
     /* width: 91.5%; */
-    width: 30%;
+    /* width: 30%; */
+    max-width: 400px;
 }
 
 .DOBContainer {

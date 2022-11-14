@@ -237,3 +237,20 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
+
+.SidebarGuildsDiscoveryHeader {
+    margin: 1rem 0 1rem 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: GintoNormal;
+    font-size: 1.5rem;
+}
+
+.GuildsDiscoveryList {
+    /* background-color: hsl(223, calc(var(--saturation-factor, 1)*6.9%), 19.8%); */
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    overflow: scroll;
+    height: 84vh;
+}
