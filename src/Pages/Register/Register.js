@@ -6,6 +6,7 @@ import InputBox from "../../Components/InputBox/InputBox";
 import Button from "../../Components/Button/Button";
 import DropDown from "../../Components/DropDown/DropDown";
 import { date } from "./../../Assets/MockData/mockdata";
+import { Navigate } from "react-router-dom";
 import {
   validateEmail,
   validatePassword,
@@ -22,6 +23,8 @@ function Register() {
   const [dateSelected, dateSetSelected] = useState("");
   const [monthSelected, monthSetSelected] = useState("");
   const [yearSelected, yearSetSelected] = useState("");
+
+  const [navigate, setNavigate] = useState(false);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -73,10 +76,13 @@ function Register() {
     let month = months.indexOf(monthSelected) + 1;
 
     fromData.append("DOB", `${dateSelected}-${month}-${yearSelected}`);
+    axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     axios
-      .post(`http://192.168.1.65:7070/signup`, fromData)
+      .post(`http://192.168.1.46:7070/signup`, fromData)
       .then((res) => {
         console.log(res);
+        sessionStorage.setItem("tokenKey", res.data.accessToken);
+        setNavigate(true);
       })
       .catch((err) => {
         console.log(err);
@@ -150,11 +156,11 @@ function Register() {
           <label className='label2'>(Optional) It’s okay to send me emails with Discord updates, tips and special offers. You can opt out at any time.</label>
           </div> */}
 
-              <label class="container2">
+              <label className="container2">
                 (Optional) It’s okay to send me emails with Discord updates,
                 tips and special offers. You can opt out at any time.
                 <input type="checkbox" />
-                <span class="checkmark2"></span>
+                <span className="checkmark2"></span>
               </label>
 
               <Button
@@ -176,6 +182,7 @@ function Register() {
           </div>
         </div>
       </div>
+      {navigate && <Navigate to="/" replace={true} />}
     </>
   );
 }

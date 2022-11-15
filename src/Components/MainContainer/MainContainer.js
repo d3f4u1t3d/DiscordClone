@@ -61,7 +61,7 @@ function MainContainer(props) {
   return (
     <>
       {props.type === 1 ? (
-        "" // <Type1 />
+        <Type1 />
       ) : props.type === 2 ? (
         "" //<Type2 />
       ) : props.type === 3 ? (

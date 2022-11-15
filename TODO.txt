@@ -8,4 +8,46 @@ Use States and Render text in the label when the values in the form are invalid.
 2. Register
 -----------
 Use States and Render text in the label when the values in the form are invalid.
-Implement Age Limit for Registration
+Implement Age Limit for Registration - Min Age 13 (Can Use Moment.js???)
+Make the DropDown Close Automatically when clicked outside
+Make the DropDown div tabable and keyboard selectable
+
+
+3. GuildsContainer Component
+-----------------------------
+Should work on the PopUps
+The Dash is missing after the first button ( put it in there )
+Should put in the download app button
+
+4. SideBar Component
+---------------------
+Implement Different Styles with Props ( Type 2 is pending )
+
+    4.1. UserInfo Component
+    ------------------------
+    Implement a State and Render Change on Click for Microphone Icon
+    Implement a State and Render Change on Click for Headphones icon
+    Implement the Settings Screen when the settings icon is pressed
+    The UserInfo PopUp needs to be implemented ( Check the notes and links for the codepen link )
+    The Status icon must be implemented for activity status ( design code exist in codepen) {uses state i think?}
+
+    4.2. Heading Component
+    -----------------------
+
+        4.2.1. Find or Search button
+        -----------------------------
+        Implement the modalPopup for the Search
+        Implement Debouncing to get the results in a better way to reduce api costs
+
+        4.2.2. DropDown Div when the focus is inside Server
+        ---------------------------------------------------
+        Implement the DropDown div for server settings
+        Design the pages for each options in the DropDownlist ( Gonna be a long process )
+
+
+    4.3. Body Component
+    -------------------
+
+        4.3.1. 
+
+

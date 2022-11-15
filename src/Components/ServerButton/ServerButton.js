@@ -14,11 +14,11 @@ export default function ServerButton({
     <>
       <div onClick={onClick} className={className}>
         {svg == "" ? <img src={img} className={imgClassName} alt={alt} /> : svg}
-        <PopUp
+        {/* <PopUp
           popUpClassName="servername_popup"
           headingClassName="servername"
           serverName={alt}
-        />
+        /> */}
       </div>
     </>
   );

@@ -18,7 +18,7 @@ function OverView(props) {
       <GuildsContainer addServerModalRef={props.addServerModalRef} />
       <div className="content">
         <SideBar type={1} />
-        <MainContainer />
+        <MainContainer type={1} />
       </div>
     </div>
   );

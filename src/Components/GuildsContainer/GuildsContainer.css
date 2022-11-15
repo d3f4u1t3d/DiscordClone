@@ -11,9 +11,10 @@ nav::-webkit-scrollbar {
     display: none;
 }
 
+/* 
 nav:hover {
     width: 16rem;
-}
+} */
 
 .nav {
     display: flex;
