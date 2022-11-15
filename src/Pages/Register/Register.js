@@ -30,12 +30,8 @@ function Register() {
 
   const valdation = (value) => {
     if (validateEmail(value.email)) {
-      // console.log("email");
       if (validatePassword(value.password)) {
-        console.log("password");
         if (validateDOB(dateSelected, monthSelected, yearSelected)) {
-          // console.log(dateSelected, monthSelected, yearSelected);
-          console.log("date");
           return true;
         } else {
           return false;
@@ -54,6 +50,37 @@ function Register() {
       alert("Wrong Data");
       return;
     }
+    let fromData = new FormData();
+    fromData.append("email", formData.email);
+    fromData.append("username", formData.username);
+    fromData.append("password", formData.password);
+
+    const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+
+    let month = months.indexOf(monthSelected) + 1;
+
+    fromData.append("DOB", `${dateSelected}-${month}-${yearSelected}`);
+    axios
+      .post(`http://192.168.1.65:7070/signup`, fromData)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -135,7 +162,6 @@ function Register() {
                 type="submit "
                 value="Continue"
                 className="ButtonLogin"
-                option={date}
               />
               <p className="login">
                 <Link to="/login">Already have an account?</Link>

@@ -1,0 +1,11 @@
+Works That needs to be done:
+----------------------------
+
+1. Login 
+--------
+Use States and Render text in the label when the values in the form are invalid.
+
+2. Register
+-----------
+Use States and Render text in the label when the values in the form are invalid.
+Implement Age Limit for Registration
