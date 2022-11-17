@@ -44,3 +44,98 @@
 .maincontainer1::-webkit-scrollbar {
     display: none;
 }
+
+.DiscoveryContent {
+    overflow: scroll;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.DiscoveryContent::-webkit-scrollbar {
+    display: none;
+}
+
+.DiscoverySearchContainer {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.Discoverysvg {
+    width: 100%;
+    height: auto;
+    color: white;
+}
+
+.SearchContent {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 360px;
+    max-width: 720px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+}
+
+.DiscoverySearchHeading {
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 500;
+    font-family: GintoNormal;
+
+}
+
+.SearchSubtitle {
+    font-size: 14px;
+    margin-top: .5rem;
+    color: white;
+    font-family: WhitneyLower;
+    font-weight: 400;
+}
+
+.DiscoverySearchBar {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: center;
+    width: 100%;
+    max-width: 560px;
+    position: relative;
+}
+
+.DiscoverySearchHolder {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    display: flex;
+    background-color: white;
+    padding-right: .5rem;
+    box-shadow: 0 2px 5px 0 rgba(var(--black-500-rgb), .2);
+    width: 100%;
+}
+
+.DiscoverySearch {
+    width: 100%;
+}
+
+.DiscoverySearch>input {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    color: hsl(210, calc(var(--saturation-factor, 1)*9.8%), 20%);
+    background-color: inherit;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+
+}

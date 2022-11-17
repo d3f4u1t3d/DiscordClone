@@ -9,7 +9,7 @@ function Button(props) {
       data-tip={props.data_tip}
       onClick={props.onClick}
     >
-      {props.value}{" "}
+      {props.value}
     </button>
   );
 }
