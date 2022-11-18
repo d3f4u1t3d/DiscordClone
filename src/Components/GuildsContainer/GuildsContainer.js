@@ -4,7 +4,6 @@ import "./GuildsContainer.css";
 import { serverData } from "../../Assets/MockData/mockdata";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import GuildsDiscovery from "../../Pages/GuildsDiscovery/GuildsDiscovery";
 
 function GuildsContainer(props) {
   let [modal, setModal] = useState(false);

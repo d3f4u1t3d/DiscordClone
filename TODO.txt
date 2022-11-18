@@ -41,13 +41,32 @@ Implement Different Styles with Props ( Type 2 is pending )
 
         4.2.2. DropDown Div when the focus is inside Server
         ---------------------------------------------------
-        Implement the DropDown div for server settings
+        Implement the DropDown div for server settings- Done
         Design the pages for each options in the DropDownlist ( Gonna be a long process )
+        Spawn Based On ServerOwner or Not
+
+
 
 
     4.3. Body Component
     -------------------
 
-        4.3.1. 
+        4.3.1. TopBar Component
+        ------------------------
+        Design all variants of UI
+        Implement all onClick functionalities
+        Summon and Desummon memberlist onClick
+        Implement the functionality of SearchBar
+
+
+
+
+
+
+
+
+
+
+
 
 

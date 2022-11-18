@@ -1,0 +1,103 @@
+.serverNameDropDown {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    user-select: none;
+    font-size: 1rem;
+    font-family: Whitney;
+    color: #fff;
+    align-items: center;
+}
+
+.serverNameDropDownContent {
+    position: absolute;
+    top: 120%;
+    padding: 10px;
+    background: #18191c;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #fff;
+    width: 83%;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+    animation: animationShowUp 0.1s linear;
+}
+
+@keyframes animationShowUp {
+    0% {
+        transform: scale(0.1);
+    }
+
+    25% {
+        transform: scale(0.3);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    75% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.items {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    align-items: center;
+}
+
+.serverNameDropDownText {
+    font-size: 14px;
+    color: rgb(185, 187, 190);
+    font-family: WhitneyLower;
+}
+
+.blue:hover {
+    background-color: #5865F2;
+    border-radius: 2px;
+}
+
+.blue:hover .serverNameDropDownText {
+    color: white;
+}
+
+.blue:hover .serverNameDropDownIcon {
+    color: #fff;
+}
+
+.blue_text {
+    color: rgb(148, 156, 247);
+}
+
+.red:hover {
+    background-color: rgb(191, 40, 43);
+    border-radius: 2px;
+}
+
+.red:hover .serverNameDropDownText {
+    color: white;
+}
+
+.red:hover .serverNameDropDownIcon {
+    color: #fff;
+}
+
+.red_text {
+    color: rgb(191, 40, 43);
+}
+
+
+
+.serverNameDropDownIcon {
+    display: flex;
+    align-content: center;
+}

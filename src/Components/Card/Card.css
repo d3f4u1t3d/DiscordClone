@@ -21,7 +21,7 @@
     height: 320px;
     width: 100%;
     border-radius: 8px;
-    transition: box-shadow .2s ease-out, transform .2s ease-out, background .2s ease-out, opacity .2s ease-in, -webkit-box-shadow .2s ease-out, -webkit-transform .2s ease-out;
+    transition: box-shadow .2s ease-out, transform .2s ease-out, background .2s ease-out;
 }
 
 .cardContainer:hover {

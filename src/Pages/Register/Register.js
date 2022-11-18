@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./Register.css";
 import InputBox from "../../Components/InputBox/InputBox";
 import Button from "../../Components/Button/Button";
-import DropDown from "../../Components/DropDown/DropDown";
+import SelectDropDown from "../../Components/SelectDropDown/SelectDropDown";
 import { date } from "./../../Assets/MockData/mockdata";
 import { Navigate } from "react-router-dom";
 import {
@@ -130,19 +130,19 @@ function Register() {
               <label className="label1">DATE OF BIRTH</label>
 
               <div className="DOBContainer">
-                <DropDown
+                <SelectDropDown
                   selected={dateSelected}
                   setSelected={dateSetSelected}
                   option={date.day}
                   defaut="Date"
                 />
-                <DropDown
+                <SelectDropDown
                   selected={monthSelected}
                   setSelected={monthSetSelected}
                   option={date.month}
                   defaut="Month"
                 />
-                <DropDown
+                <SelectDropDown
                   selected={yearSelected}
                   setSelected={yearSetSelected}
                   option={date.year}
