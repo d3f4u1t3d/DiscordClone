@@ -10,7 +10,7 @@ function Type1() {
   return (
     <>
       <div className="main_container">
-        <SearchBarMainContainer />
+        <SearchBarMainContainer type={2} />
         {/* <div className="testcontainer">
             <div className="chatcontainer">
 

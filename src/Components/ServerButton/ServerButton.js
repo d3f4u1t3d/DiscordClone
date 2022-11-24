@@ -13,7 +13,9 @@ export default function ServerButton({
   return (
     <>
       <div onClick={onClick} className={className}>
-        {svg == "" ? <img src={img} className={imgClassName} alt={alt} /> : svg}
+        {console.log(img)}
+        {/* <img src={img} className={imgClassName} alt={alt} /> */}
+        {!svg ? <img src={img} className={imgClassName} alt={alt} /> : svg}
         {/* <PopUp
           popUpClassName="servername_popup"
           headingClassName="servername"

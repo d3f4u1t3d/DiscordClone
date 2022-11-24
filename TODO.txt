@@ -25,10 +25,10 @@ Implement Different Styles with Props ( Type 2 is pending )
 
     4.1. UserInfo Component
     ------------------------
-    Implement a State and Render Change on Click for Microphone Icon
-    Implement a State and Render Change on Click for Headphones icon
+    Implement a State and Render Change on Click for Microphone Icon -- Done
+    Implement a State and Render Change on Click for Headphones icon -- Done
     Implement the Settings Screen when the settings icon is pressed
-    The UserInfo PopUp needs to be implemented ( Check the notes and links for the codepen link )
+    The UserInfo PopUp needs to be implemented ( Check the notes and links for the codepen link )-- Designing is done ,, needs to be embedded
     The Status icon must be implemented for activity status ( design code exist in codepen) {uses state i think?}
 
     4.2. Heading Component

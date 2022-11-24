@@ -10,6 +10,7 @@ import AddServerModal from "./Components/AddServerModal/AddServerModal";
 import AddServerModalJoin from "./Components/AddServerModalJoin/AddServerModalJoin";
 import AddServerModalCreateServerTemplate0 from "./Components/AddServerModalCreateServerTemplate0/AddServerModalCreateServerTemplate0";
 import CreateServerModal from "./Components/CreateServerModal/CreateServerModal";
+import UserInfoPopUp from "./Components/UserInfoPopUP/UserInfoPopUp";
 
 function App() {
   const [selected, setSelected] = useState("");
@@ -36,10 +37,8 @@ function App() {
   return (
     <div style={{ display: "flex", flex: 1 }}>
       {/* <Home/> */}
+      {/* <UserInfoPopUp /> */}
       <OverView addServerModalRef={addServerModalRef} />
-      {/* <AddServerModal /> */}
-      {/* test */}
-      {/* <LoadingScreen /> */}
       <AddServerModalJoin
         setJoinRef={setJoinRef}
         addServerModalRef={addServerModalRef}

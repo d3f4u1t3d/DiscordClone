@@ -59,3 +59,18 @@
     color: gray;
     background-color: inherit;
 }
+
+.verticaldivider {
+    border-left: 1px solid grey;
+    height: 28px;
+}
+
+.searchbarlefticons {
+    display: flex;
+    align-items: center;
+}
+
+.righticons {
+    display: flex;
+    align-items: center;
+}

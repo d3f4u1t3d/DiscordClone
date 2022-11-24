@@ -12,17 +12,17 @@ import {
 import QR from "./../../Assets/Logos/QR1.jpg";
 import { Link, Navigate } from "react-router-dom";
 
-axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
-const api = axios.create({
-  baseURL: "http://192.168.1.65:7070",
-});
+// axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+// const api = axios.create({
+//   baseURL: process.env.REACT_APP_API_KEY,
+// });
 
 function Login() {
   document.title = "Discord";
 
-  api.get("/welcome").then((res) => {
-    console.log(res.data.message);
-  });
+  // api.get("/welcome").then((res) => {
+  //   console.log(res.data.message);
+  // });
 
   const [summonError, setSummonError] = useState(0);
 
@@ -53,8 +53,8 @@ function Login() {
       alert("Wrong Data");
       return;
     }
-    api
-      .post("/login", formData)
+    axios
+      .post(`${process.env.REACT_APP_API_KEY}/login`, formData)
       // sendForm("user/login",formData)
       .then((res) => {
         console.log(res);

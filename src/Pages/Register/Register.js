@@ -78,7 +78,7 @@ function Register() {
     fromData.append("DOB", `${dateSelected}-${month}-${yearSelected}`);
     axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     axios
-      .post(`http://192.168.1.46:7070/signup`, fromData)
+      .post(`${process.env.REACT_APP_API_KEY}/signup`, fromData)
       .then((res) => {
         console.log(res);
         sessionStorage.setItem("tokenKey", res.data.accessToken);
